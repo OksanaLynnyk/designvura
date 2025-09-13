@@ -1,0 +1,99 @@
+@use './common/mixins' as *;
+@use './common/breakpoints' as bp;
+
+.services {
+  @include media(to-desktop) {
+    padding-bottom: 48px;
+    h2 {
+      width: 227px;
+    }
+  }
+
+  @include media(desktop) {
+    padding-bottom: 80px;
+  }
+
+  .text {
+    text-align: right;
+
+    @include media(to-desktop) {
+      width: 254px;
+      margin-left: auto;
+    }
+  }
+}
+
+.services-wrapper {
+  @include media(to-desktop) {
+    margin-bottom: 32px;
+  }
+
+  @include media(desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+  }
+}
+
+.services-list {
+  display: flex;
+
+  @include media(to-desktop) {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  @include media(desktop) {
+    gap: 25px;
+    align-items: center;
+  }
+}
+
+.services-img {
+  @include media(to-desktop) {
+    width: 87px;
+    height: 90px;
+  }
+
+  @include media(desktop) {
+    width: 132px;
+    height: 136px;
+  }
+}
+
+.services-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(34, 34, 34, 0.6);
+  border-radius: 12px;
+  align-items: center;
+
+  @include media(to-desktop) {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  @include media(desktop) {
+    gap: 26px;
+    padding: 24px;
+    height: 332px;
+    width: 220px;
+  }
+}
+
+.services-name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #5b3eff;
+}
+
+.services-text {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+}

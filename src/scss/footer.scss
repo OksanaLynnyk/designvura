@@ -1,0 +1,118 @@
+@use './common/mixins' as *;
+@use './common/breakpoints' as bp;
+
+.footer {
+  background-color: #222222;
+  color: #fdfdfd;
+
+  @include media(to-desktop) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  @include media(desktop) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.footer-title {
+  font-family: 'Playfair Display', serif;
+  line-height: 150%;
+  text-align: center;
+  font-weight: 400;
+
+  @include media(to-desktop) {
+    font-size: 20px;
+    margin-bottom: 32px;
+  }
+
+  @include media(desktop) {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+.footer-wrapper {
+  display: flex;
+
+  @include media(to-desktop) {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  @include media(desktop) {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer-social-list {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  justify-content: center;
+
+  @include media(desktop) {
+    order: 2;
+  }
+}
+
+.footer-social-link {
+  width: 24px;
+  height: 24px;
+  transition: all 300ms ease;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+}
+
+.footer-social-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include media(to-desktop) {
+    gap: 16px;
+  }
+
+  @include media(desktop) {
+    gap: 24px;
+    order: 3;
+  }
+}
+
+.footer-link {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  transition: color 300ms ease;
+
+  &:hover,
+  &:focus {
+    color: #5b3eff;
+  }
+}
+
+.footer-text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+
+  @include media(to-desktop) {
+    text-align: center;
+  }
+
+  @include media(desktop) {
+    order: 1;
+  }
+}

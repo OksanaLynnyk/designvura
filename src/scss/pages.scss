@@ -1,0 +1,149 @@
+@use './common/mixins' as *;
+@use './common/breakpoints' as bp;
+
+.pages-section {
+  padding-bottom: 40px;
+  color: #010511;
+
+  @include media(to-desktop) {
+    padding-top: 32px;
+  }
+
+  @include media(desktop) {
+    padding-top: 56px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 40px;
+
+    @include media(to-desktop) {
+      font-size: 32px;
+      line-height: 140%;
+    }
+
+    @include media(desktop) {
+      font-size: 40px;
+    }
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 130%;
+    margin-top: 20px;
+    margin-bottom: 16px;
+  }
+
+  pre,
+  a,
+  li,
+  p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 130%;
+  }
+
+  pre {
+    font-family: inherit;
+    white-space: pre-line;
+    margin: 0;
+  }
+
+  a {
+    display: inline;
+    word-wrap: break-word;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 26px;
+  }
+
+  .underline {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+
+  .back-btn {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    gap: 12px;
+    padding: 0px 16px;
+
+    transition: color 300ms ease;
+
+    @include media(to-desktop) {
+      margin-bottom: 40px;
+    }
+
+    @include media(desktop) {
+      margin-bottom: 24px;
+    }
+
+    &:hover,
+    &:focus {
+      color: #5b3eff;
+
+      svg {
+        stroke: #5b3eff;
+      }
+    }
+  }
+
+  .back {
+    width: 24px;
+    height: 24px;
+    fill: transparent;
+    stroke: #010511;
+  }
+
+  .subtitle {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  .subtitle-small {
+    margin-top: 20px;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+  }
+
+  .bold {
+    font-weight: 400;
+  }
+
+  .fz {
+    @include media(to-desktop) {
+      font-size: 30px;
+      letter-spacing: 0.02em;
+    }
+  }
+}
+
+.pages-container {
+  margin: 0 auto;
+
+  @include media(to-desktop) {
+    width: 373px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @include media(desktop) {
+    width: 1442px;
+    padding-right: 190px;
+    padding-left: 190px;
+  }
+}

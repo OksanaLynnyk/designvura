@@ -1,0 +1,39 @@
+@use './common/mixins' as *;
+@use './common/breakpoints' as bp;
+
+.about {
+  @include media(to-desktop) {
+    .text {
+      letter-spacing: -0.01em;
+    }
+  }
+
+  @include media(desktop) {
+    h2 {
+      flex-shrink: 0;
+    }
+  }
+}
+
+.about-wrapper {
+  @include media(to-desktop) {
+    margin-bottom: 25px;
+  }
+
+  @include media(desktop) {
+    display: flex;
+    gap: 62px;
+    align-items: end;
+    margin-bottom: 32px;
+  }
+}
+
+.about-image {
+  @include media(to-desktop) {
+    height: 180px;
+  }
+
+  @include media(desktop) {
+    height: 360px;
+  }
+}

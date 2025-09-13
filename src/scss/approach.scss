@@ -1,0 +1,112 @@
+@use './common/mixins' as *;
+@use './common/breakpoints' as bp;
+
+.approach {
+  position: relative;
+
+  @include media(to-desktop) {
+    padding-bottom: 65px;
+
+    .text {
+      text-align: right;
+      width: 299px;
+      margin-left: auto;
+    }
+  }
+
+  @include media(desktop) {
+    padding-bottom: 252px;
+  }
+}
+
+.approach-wrapper {
+  @include media(to-desktop) {
+    margin-bottom: 65px;
+  }
+
+  @include media(desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 72px;
+  }
+}
+
+.approach-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include media(to-desktop) {
+    padding-left: 45px;
+  }
+
+  @include media(desktop) {
+    padding-left: 462px;
+  }
+}
+
+.approach-bold {
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  @include media(to-desktop) {
+    line-height: 140%;
+  }
+}
+
+.approach-text {
+  font-weight: 300;
+  font-size: 16px;
+
+  @include media(to-desktop) {
+    line-height: 140%;
+  }
+}
+
+.approach-item {
+  position: relative;
+
+  @include media(to-desktop) {
+    padding-left: 26px;
+  }
+
+  @include media(desktop) {
+    padding-left: 22px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+
+    width: 10px;
+    height: 10px;
+    border: 2px solid #5b3eff;
+
+    @include media(to-desktop) {
+      top: 0;
+    }
+
+    @include media(desktop) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.approach-img {
+  position: absolute;
+  z-index: -1;
+
+  @include media(to-desktop) {
+    height: 524px;
+    top: 289px;
+  }
+
+  @include media(desktop) {
+    height: 483px;
+    top: 261px;
+  }
+}

@@ -1,0 +1,24 @@
+@use './common/global.scss';
+@use './header.scss';
+@use './hero.scss';
+@use './about.scss';
+@use './services.scss';
+@use './approach.scss';
+@use './testimonials.scss';
+@use './contact.scss';
+
+@use './footer.scss';
+@use './cookie-popup.scss';
+@use './pages.scss';
+
+:root {
+  font-family: "Work Sans", sans-serif;
+  background-color: #FDFDFD;
+  color: #222222;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
